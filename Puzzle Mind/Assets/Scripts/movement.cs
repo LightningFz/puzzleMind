@@ -12,6 +12,7 @@ public class movement : MonoBehaviour
     private bool isGrounded;
     private bool isJumping = false;
     private float horizontal;
+    private float verticle;
     private int jumpCount;
 
     [SerializeField] private Transform groundCheck;
@@ -55,7 +56,6 @@ public class movement : MonoBehaviour
         {
             isJumping = true;
         }
-
     }
     private void move()
     {
