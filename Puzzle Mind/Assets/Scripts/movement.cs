@@ -52,7 +52,7 @@ public class movement : MonoBehaviour
     private void getInput()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") || Input.GetKeyDown("up") || Input.GetKeyDown("w"))
         {
             isJumping = true;
         }
