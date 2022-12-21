@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class door : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+  BoxCollider2D col;
+  void Awake(){
+    col = GetComponent<BoxCollider2D>();
+  }
+  public bool doorOpen;
+  void Update(){
+    if(doorOpen == true){
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
+  }
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Button : MonoBehaviour
+public class button : MonoBehaviour
 {
     door dr;
     public void OnTriggerEnter2D(Collision2D other)
