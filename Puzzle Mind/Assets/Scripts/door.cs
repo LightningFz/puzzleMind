@@ -4,14 +4,22 @@ using UnityEngine;
 
 public class door : MonoBehaviour
 {
-  BoxCollider2D col;
-  void Awake(){
-    col = GetComponent<BoxCollider2D>();
-  }
-  public bool doorOpen;
-  void Update(){
-    if(doorOpen == true){
-
+    public bool doorOpen = false;
+    BoxCollider2D col;
+    void Awake(){
+          col = GetComponent<BoxCollider2D>();
     }
-  }
+    void Update(){
+        DoorCheck();
+    }
+    void DoorCheck() {
+        if (doorOpen == true)
+        {
+            col.enabled = false;
+        }
+        else
+        {
+            col.enabled = true;
+        }
+    }
 }

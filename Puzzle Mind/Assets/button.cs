@@ -4,13 +4,25 @@ using UnityEngine;
 
 public class button : MonoBehaviour
 {
-    door dr;
-    public void OnTriggerEnter2D(Collision2D other)
+    public door dr;
+
+    void OnTriggerEnter2D(Collider2D other)
     {
-        dr = gameObject.GetComponent<door>();
-        if(other.transform.name == "Charecter1"){
-            Debug.Log("fhfgj");
+        if (other.CompareTag("Player")|| other.CompareTag("Box"))
+        {
+            Debug.Log(dr.doorOpen);
+            if (dr.doorOpen == false)
+            {
+                dr.doorOpen = true;
+                Debug.Log(dr.doorOpen);
+            }
+            else if (dr.doorOpen == true)
+            {
+                dr.doorOpen = false;
+                Debug.Log(dr.doorOpen);
+            }
+            Debug.Log(dr.doorOpen);
         }
     }
-    
+
 }
