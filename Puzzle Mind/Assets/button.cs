@@ -10,18 +10,18 @@ public class button : MonoBehaviour
     {
         if (other.CompareTag("Player")|| other.CompareTag("Box"))
         {
-            Debug.Log(dr.doorOpen);
-            if (dr.doorOpen == false)
-            {
-                dr.doorOpen = true;
-                Debug.Log(dr.doorOpen);
-            }
-            else if (dr.doorOpen == true)
-            {
-                dr.doorOpen = false;
-                Debug.Log(dr.doorOpen);
-            }
-            Debug.Log(dr.doorOpen);
+            Switch();
+        }
+    }
+    void Switch()
+    {
+        if (dr.doorOpen == false)
+        {
+            dr.doorOpen = true;
+        }
+        else if (dr.doorOpen == true)
+        {
+            dr.doorOpen = false;
         }
     }
 
