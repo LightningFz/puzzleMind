@@ -2,15 +2,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Button : MonoBehaviour
+public class button : MonoBehaviour
 {
-    door dr;
-    public void OnTriggerEnter2D(Collider2D other)
+    public door dr;
+    public Sprite buttonPressed;
+    public Sprite buttonUnpressed;
+
+    void OnTriggerEnter2D(Collider2D other)
     {
-        dr = gameObject.GetComponent<door>();
-        if(other.transform.name == "Charecter1"){
-            Debug.Log("fhfgj");
+        if (other.CompareTag("Player")|| other.CompareTag("Box"))
+        {
+            Switch();
         }
     }
-    
+    void Switch()
+    {
+        if (dr.doorOpen == false)
+        {
+            dr.doorOpen = true;
+        }
+        else if (dr.doorOpen == true)
+        {
+            dr.doorOpen = false;
+        }
+    }
+    void Update()
+    {
+        if (dr.doorOpen == true){
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = buttonPressed;
+        }else if (dr.doorOpen == false){
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = buttonUnpressed;
+        }
+    }
+
 }

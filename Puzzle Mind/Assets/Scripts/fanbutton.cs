@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class button : MonoBehaviour
+public class fanbutton : MonoBehaviour
 {
-    public door dr;
+    public fan fn;
     public Sprite buttonPressed;
     public Sprite buttonUnpressed;
 
@@ -17,20 +17,20 @@ public class button : MonoBehaviour
     }
     void Switch()
     {
-        if (dr.doorOpen == false)
+        if (fn.fanon == false)
         {
-            dr.doorOpen = true;
+            fn.fanon = true;
         }
-        else if (dr.doorOpen == true)
+        else if (fn.fanon == true)
         {
-            dr.doorOpen = false;
+            fn.fanon = false;
         }
     }
     void Update()
     {
-        if (dr.doorOpen == true){
+        if (fn.fanon == true){
             this.gameObject.GetComponent<SpriteRenderer>().sprite = buttonPressed;
-        }else if (dr.doorOpen == false){
+        }else if (fn.fanon == false){
             this.gameObject.GetComponent<SpriteRenderer>().sprite = buttonUnpressed;
         }
     }
