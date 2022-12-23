@@ -17,20 +17,20 @@ public class fanbutton : MonoBehaviour
     }
     void Switch()
     {
-        if (fn.fanon == false)
+        if (fn.fanOn == false)
         {
-            fn.fanon = true;
+            fn.fanOn = true;
         }
-        else if (fn.fanon == true)
+        else if (fn.fanOn == true)
         {
-            fn.fanon = false;
+            fn.fanOn = false;
         }
     }
     void Update()
     {
-        if (fn.fanon == true){
+        if (fn.fanOn == true){
             this.gameObject.GetComponent<SpriteRenderer>().sprite = buttonPressed;
-        }else if (fn.fanon == false){
+        }else if (fn.fanOn == false){
             this.gameObject.GetComponent<SpriteRenderer>().sprite = buttonUnpressed;
         }
     }
