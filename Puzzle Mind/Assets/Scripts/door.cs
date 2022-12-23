@@ -16,10 +16,16 @@ public class door : MonoBehaviour
         if (doorOpen == true)
         {
             col.enabled = false;
+            //while(check for rotation to be 90){
+            //    transform.Rotate(0,0,0.1);
+            //}
         }
         else
         {
             col.enabled = true;
+            //while(check for rotation to be 0){
+            //    transform.Rotate(0,0,-0.1);
+            //}
         }
     }
 }
