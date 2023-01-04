@@ -9,6 +9,7 @@ public class movement : MonoBehaviour
     public int maxJumps = 1;
     public float checkRadius;
 
+    public bool isFacingLeft = true;
     private bool isGrounded;
     private bool isJumping = false;
     private float horizontal;
@@ -34,6 +35,7 @@ public class movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        faceRight();
         getInput();
     }
     private void FixedUpdate()
@@ -66,5 +68,21 @@ public class movement : MonoBehaviour
             jumpCount--;
         }
         isJumping = false;
+    }
+    public void faceRight()
+    {
+        if (horizontal < 0 && isFacingLeft)
+        {
+            Flip();
+        }
+        else if (horizontal > 0 && !isFacingLeft)
+        {
+            Flip();
+        }
+    }
+    public void Flip()
+    {
+        isFacingLeft = !isFacingLeft;
+        transform.Rotate(0f, 180, 0f);
     }
 }
