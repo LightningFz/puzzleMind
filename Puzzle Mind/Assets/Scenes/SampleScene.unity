@@ -3315,6 +3315,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5900266476381270574, guid: 1b7043cb11690854eab7dbc38759571e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 75ecb2bb08d84c944819f4de8afbedc4, type: 3}
     - target: {fileID: 5900266476381270575, guid: 1b7043cb11690854eab7dbc38759571e, type: 3}
       propertyPath: m_Name
       value: Fan
