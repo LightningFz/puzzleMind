@@ -11,12 +11,14 @@ public class movement : MonoBehaviour
 
     public bool isFacingLeft = true;
     private bool isGrounded;
+    private bool isGrounded2;
     private bool isJumping = false;
     private float horizontal;
     private float verticle;
     private int jumpCount;
 
-    [SerializeField] private Transform groundCheck;
+    [SerializeField] private Transform groundCheckR;
+    [SerializeField] private Transform groundCheckL;
     [SerializeField] private LayerMask groundObject;
 
     Rigidbody2D rb;
@@ -45,10 +47,13 @@ public class movement : MonoBehaviour
     }
     private void Grounded()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundObject);
-        if (isGrounded)
+        isGrounded = Physics2D.OverlapCircle(groundCheckR.position, checkRadius, groundObject);
+        isGrounded2 = Physics2D.OverlapCircle(groundCheckL.position, checkRadius, groundObject);
+        if (isGrounded || isGrounded2)
         {
             jumpCount = maxJumps;
+        }else{
+            jumpCount = 0;
         }
     }
     private void getInput()
