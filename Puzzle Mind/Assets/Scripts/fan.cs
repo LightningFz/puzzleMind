@@ -8,6 +8,7 @@ public class fan : MonoBehaviour
     public bool fanDirection = false;
     public int direction = 1;
     public int fanPower = 5;
+
     void Update()
     {
         if(fanDirection == false)
@@ -17,7 +18,6 @@ public class fan : MonoBehaviour
         {
             direction = -1;
         }
-
     }
     void OnTriggerStay2D(Collider2D other) {
         if (other.CompareTag("Player"))
