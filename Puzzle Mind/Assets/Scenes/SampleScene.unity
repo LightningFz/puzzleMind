@@ -3990,7 +3990,7 @@ GameObject:
   - component: {fileID: 1756950053}
   - component: {fileID: 1756950052}
   - component: {fileID: 1756950051}
-  - component: {fileID: 1756950050}
+  - component: {fileID: 1756950054}
   m_Layer: 3
   m_Name: sliding platform (1)
   m_TagString: Untagged
@@ -4014,22 +4014,6 @@ Transform:
   m_Father: {fileID: 1872873128}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1756950050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1756950048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8953cc27f7d1f4a44b91b6ec955db24c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  posA: {fileID: 1950784887}
-  posB: {fileID: 1762707162}
-  Speed: 4
-  timer: 2
 --- !u!50 &1756950051
 Rigidbody2D:
   serializedVersion: 4
@@ -4129,6 +4113,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1756950054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756950048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cc7c05722ca05f419f6de192c4902a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  posA: {fileID: 1950784887}
+  posB: {fileID: 1762707162}
+  posC: {fileID: 1940074825}
+  Speed: 4
+  timer: 2
 --- !u!1 &1762707161
 GameObject:
   m_ObjectHideFlags: 0
@@ -4194,6 +4195,7 @@ Transform:
   - {fileID: 1756950049}
   - {fileID: 1950784887}
   - {fileID: 1762707162}
+  - {fileID: 1940074825}
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4407,6 +4409,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1940074824
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1940074825}
+  m_Layer: 0
+  m_Name: posC
+  m_TagString: Untagged
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1940074825
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940074824}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 35, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1872873128}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1950784886
 GameObject:
   m_ObjectHideFlags: 0
