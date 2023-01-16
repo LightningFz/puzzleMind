@@ -36,4 +36,3 @@ public class platformControlertwo : MonoBehaviour
         targetPos = posB.position;
     }
 }
-
